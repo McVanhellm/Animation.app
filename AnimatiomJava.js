@@ -1,7 +1,6 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
-
 var ball = {
   x: 100,
   y: 100,
@@ -17,7 +16,6 @@ var ball = {
     ctx.fill();
   }
 };
-
 function draw() {
   ctx.clearRect(0,0, canvas.width, canvas.height);
   ball.draw();
@@ -31,13 +29,10 @@ function draw() {
    ball.vx = -ball.vx;
  }
 }
-
 canvas.addEventListener('mouseover', function(e) {
   raf = window.requestAnimationFrame(draw);
 });
-
 canvas.addEventListener('mouseout', function(e) {
   window.cancelAnimationFrame(raf);
 });
-
 ball.draw();
