@@ -22,10 +22,10 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
   raf = window.requestAnimationFrame(draw);
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height-21 || ball.y + ball.vy < 21) {
    ball.vy = -ball.vy;
  }
- if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+ if (ball.x + ball.vx > canvas.width-21 || ball.x + ball.vx < 21) {
    ball.vx = -ball.vx;
  }
 }
